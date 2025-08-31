@@ -1,29 +1,33 @@
 <?php
 /**
  * @file plugins/importexport/copernicus/CopernicusPlugin.php
+ * @brief Index Copernicus XML export plugin entry point for OJS 3.5.0-1.
  *
- * Copernicus export plugin (OJS 3.5.0-1)
- * DOAJ-like architecture: thin plugin + dedicated XML builder/validator.
+ * Architecture
+ *  - Thin plugin wrapper; XML generation & XSD validation are delegated to
+ *    classes/CopernicusXmlBuilder.php (DOAJ-like separation of concerns).
  *
- * - Reads "validateSchema" from GET/POST (default = true)
- * - Passes options to CopernicusXmlBuilder (validation, schema path, etc.)
- * - Keeps templates simple (index.tpl, issues.tpl)
- */
-
-
-/**
- * Index Copernicus Export Plugin for OJS 3.5
+ * Features
+ *  - Optional XSD validation (default: enabled). Toggle via GET/POST:
+ *      validateSchema=0|1
+ *  - Schema path:
+ *      plugins/importexport/copernicus/schema/journal_import_ici.xsd
+ *  - Simple UI templates: index.tpl, issues.tpl
+ *
  * SPDX-License-Identifier: GPL-3.0-only
+ * @license GPL-3.0-only https://www.gnu.org/licenses/gpl-3.0.txt
  *
  * Upgraded for OJS 3.5 by:
  *   Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>
  *   Queen Arwa University
  *
- * Copyright (c) 2025 Queen Arwa University
+ * Copyright (c) 2025
+ *   Queen Arwa University
  *
  * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 3 (GPL-3.0-only)
- * as published by the Free Software Foundation.
+ * it under the terms of the GNU General Public License version 3
+ * (GPL-3.0-only) as published by the Free Software Foundation.
+ * See the LICENSE file for details.
  */
 
 

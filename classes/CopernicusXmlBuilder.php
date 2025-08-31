@@ -1,32 +1,37 @@
 <?php
 /**
  * @file plugins/importexport/copernicus/classes/CopernicusXmlBuilder.php
+ * @brief Standalone XML builder & XSD validator for Index Copernicus (ICI) export, OJS 3.5.0-1.
  *
- * Standalone XML builder & validator for Copernicus (ICI) export, OJS 3.5.0-1.
- * DOAJ-like separation: complex XML logic lives here, not in the plugin entry.
+ * Architecture
+ *  - DOAJ-like separation: all XML generation/validation logic is encapsulated here,
+ *    while the plugin entry remains thin.
  *
- * Key features:
- * - <issue> elements are direct children of <ici-import>; <journal> is empty element (issn attr only).
- * - Robust author parsing (avoid duplicated names, detect middle name).
- * - DOAJ-style affiliation resolution (getLocalizedAffiliationNames) with fallbacks.
- * - Multi-language <languageVersion> created from the union of locales across title/abstract/keywords.
- * - DOI normalization, CC license mapping, XSD validation (optional).
- */
-
-/**
- * Index Copernicus Export Plugin for OJS 3.5
+ * Features
+ *  - <issue> elements are direct children of <ici-import>; <journal> is an empty
+ *    element carrying the ISSN as an attribute only.
+ *  - Multi-language <languageVersion> blocks for available locales.
+ *  - Robust author handling (given/surname, optional middle name, ORCID, role).
+ *  - DOAJ-style affiliation resolution via getLocalizedAffiliationNames() with fallbacks.
+ *  - DOI normalization, CC license type mapping, optional XSD validation.
+ *  - Schema path (default): plugins/importexport/copernicus/schema/journal_import_ici.xsd
+ *
  * SPDX-License-Identifier: GPL-3.0-only
+ * @license GPL-3.0-only https://www.gnu.org/licenses/gpl-3.0.txt
  *
  * Upgraded for OJS 3.5 by:
  *   Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>
  *   Queen Arwa University
  *
- * Copyright (c) 2025 Queen Arwa University
+ * Copyright (c) 2025
+ *   Queen Arwa University
  *
  * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 3 (GPL-3.0-only)
- * as published by the Free Software Foundation.
+ * it under the terms of the GNU General Public License version 3
+ * (GPL-3.0-only) as published by the Free Software Foundation.
+ * See the LICENSE file for details.
  */
+
 
 
 
