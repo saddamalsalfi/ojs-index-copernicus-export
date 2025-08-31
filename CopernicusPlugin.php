@@ -10,6 +10,24 @@
  * - Keeps templates simple (index.tpl, issues.tpl)
  */
 
+
+/**
+ * Index Copernicus Export Plugin for OJS 3.5
+ * SPDX-License-Identifier: GPL-3.0-only
+ *
+ * Upgraded for OJS 3.5 by:
+ *   Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>
+ *   Queen Arwa University
+ *
+ * Copyright (c) 2025 Queen Arwa University
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 (GPL-3.0-only)
+ * as published by the Free Software Foundation.
+ */
+
+
+
 namespace APP\plugins\importexport\copernicus;
 
 use APP\facades\Repo;

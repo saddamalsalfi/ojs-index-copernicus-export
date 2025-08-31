@@ -221,3 +221,13 @@ GNU General Public License v3 (see `docs/COPYING`).
 
 - Based on the architecture patterns used in the official **DOAJ** export plugin for OJS.
 - Thanks to the OJS/PKP community for guidance and testing.
+
+**Upgraded for OJS 3.5 by**
+- Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>, Queen Arwa University
+
+
+## License
+This plugin is released under the GNU General Public License v3 (GPL-3.0-only).
+
+- SPDX: GPL-3.0-only
+- See the LICENSE file for the full license text.
