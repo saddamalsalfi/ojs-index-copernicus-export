@@ -1,0 +1,31 @@
+NOTICE (Attributions)
+
+Project: OJS Index Copernicus Export Plugin
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Copyright (c) 2025
+  Queen Arwa University
+
+Upgraded for OJS 3.5 by:
+  Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>
+  Queen Arwa University
+
+Upstream basis and acknowledgments:
+  - ekodidik/ojs2-ici-export-plugin (legacy OJS2-era plugin)
+    https://github.com/ekodidik/ojs2-ici-export-plugin
+  - Public Knowledge Project (PKP) / Open Journal Systems (OJS)
+    https://pkp.sfu.ca/ojs/
+
+Summary:
+  This plugin exports OJS submissions/issues to Index Copernicus XML.
+  It was modernized for OJS 3.5, including a dedicated XML builder,
+  schema validation hooks, multilingual handling, and affiliation
+  extraction inspired by the DOAJ export plugin.
+
+Trademarks:
+  "Open Journal Systems" and "PKP" are trademarks of their respective owners.
+  Use of these names does not imply endorsement.
+
+License:
+  This software is licensed under the GNU General Public License v3.0 or later.
+  See LICENSE.txt for details.

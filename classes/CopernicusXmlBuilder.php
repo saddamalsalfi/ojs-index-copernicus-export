@@ -16,8 +16,8 @@
  *  - DOI normalization, CC license type mapping, optional XSD validation.
  *  - Schema path (default): plugins/importexport/copernicus/schema/journal_import_ici.xsd
  *
- * SPDX-License-Identifier: GPL-3.0-only
- * @license GPL-3.0-only https://www.gnu.org/licenses/gpl-3.0.txt
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * @license GPL-3.0-or-later https://www.gnu.org/licenses/gpl-3.0.html
  *
  * Upgraded for OJS 3.5 by:
  *   Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>
@@ -26,10 +26,11 @@
  * Copyright (c) 2025
  *   Queen Arwa University
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 3
- * (GPL-3.0-only) as published by the Free Software Foundation.
- * See the LICENSE file for details.
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or (at your
+ * option) any later version.
+ * See the LICENSE.txt file for details.
  */
 
 
