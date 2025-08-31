@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+   <xs:simpleType name="countryCodeType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Country code based on ISO 3166-1</xs:documentation>
+         <xs:documentation xml:lang="pl">Kod kraju bazujący na ISO 3166-1</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="AD" />
+         <xs:enumeration value="AE" />
+         <xs:enumeration value="AF" />
+         <xs:enumeration value="AG" />
+         <xs:enumeration value="AI" />
+         <xs:enumeration value="AL" />
+         <xs:enumeration value="AM" />
+         <xs:enumeration value="AN" />
+         <xs:enumeration value="AO" />
+         <xs:enumeration value="AQ" />
+         <xs:enumeration value="AR" />
+         <xs:enumeration value="AS" />
+         <xs:enumeration value="AT" />
+         <xs:enumeration value="AU" />
+         <xs:enumeration value="AW" />
+         <xs:enumeration value="AX" />
+         <xs:enumeration value="AZ" />
+         <xs:enumeration value="BA" />
+         <xs:enumeration value="BB" />
+         <xs:enumeration value="BD" />
+         <xs:enumeration value="BE" />
+         <xs:enumeration value="BF" />
+         <xs:enumeration value="BG" />
+         <xs:enumeration value="BH" />
+         <xs:enumeration value="BI" />
+         <xs:enumeration value="BJ" />
+         <xs:enumeration value="BL" />
+         <xs:enumeration value="BM" />
+         <xs:enumeration value="BN" />
+         <xs:enumeration value="BO" />
+         <xs:enumeration value="BQ" />
+         <xs:enumeration value="BR" />
+         <xs:enumeration value="BS" />
+         <xs:enumeration value="BT" />
+         <xs:enumeration value="BV" />
+         <xs:enumeration value="BW" />
+         <xs:enumeration value="BY" />
+         <xs:enumeration value="BZ" />
+         <xs:enumeration value="CA" />
+         <xs:enumeration value="CC" />
+         <xs:enumeration value="CD" />
+         <xs:enumeration value="CF" />
+         <xs:enumeration value="CG" />
+         <xs:enumeration value="CH" />
+         <xs:enumeration value="CI" />
+         <xs:enumeration value="CK" />
+         <xs:enumeration value="CL" />
+         <xs:enumeration value="CM" />
+         <xs:enumeration value="CN" />
+         <xs:enumeration value="CO" />
+         <xs:enumeration value="CR" />
+         <xs:enumeration value="CS" />
+         <xs:enumeration value="CU" />
+         <xs:enumeration value="CV" />
+         <xs:enumeration value="CX" />
+         <xs:enumeration value="CY" />
+         <xs:enumeration value="CZ" />
+         <xs:enumeration value="DE" />
+         <xs:enumeration value="DJ" />
+         <xs:enumeration value="DK" />
+         <xs:enumeration value="DM" />
+         <xs:enumeration value="DO" />
+         <xs:enumeration value="DZ" />
+         <xs:enumeration value="EC" />
+         <xs:enumeration value="EE" />
+         <xs:enumeration value="EG" />
+         <xs:enumeration value="EH" />
+         <xs:enumeration value="ER" />
+         <xs:enumeration value="ES" />
+         <xs:enumeration value="ET" />
+         <xs:enumeration value="FI" />
+         <xs:enumeration value="FJ" />
+         <xs:enumeration value="FK" />
+         <xs:enumeration value="FM" />
+         <xs:enumeration value="FO" />
+         <xs:enumeration value="FR" />
+         <xs:enumeration value="GA" />
+         <xs:enumeration value="GB" />
+         <xs:enumeration value="GD" />
+         <xs:enumeration value="GE" />
+         <xs:enumeration value="GF" />
+         <xs:enumeration value="GG" />
+         <xs:enumeration value="GH" />
+         <xs:enumeration value="GI" />
+         <xs:enumeration value="GL" />
+         <xs:enumeration value="GM" />
+         <xs:enumeration value="GN" />
+         <xs:enumeration value="GP" />
+         <xs:enumeration value="GQ" />
+         <xs:enumeration value="GR" />
+         <xs:enumeration value="GS" />
+         <xs:enumeration value="GT" />
+         <xs:enumeration value="GU" />
+         <xs:enumeration value="GW" />
+         <xs:enumeration value="GY" />
+         <xs:enumeration value="HK" />
+         <xs:enumeration value="HM" />
+         <xs:enumeration value="HN" />
+         <xs:enumeration value="HR" />
+         <xs:enumeration value="HT" />
+         <xs:enumeration value="HU" />
+         <xs:enumeration value="ID" />
+         <xs:enumeration value="IE" />
+         <xs:enumeration value="IL" />
+         <xs:enumeration value="IM" />
+         <xs:enumeration value="IN" />
+         <xs:enumeration value="IO" />
+         <xs:enumeration value="IQ" />
+         <xs:enumeration value="IR" />
+         <xs:enumeration value="IS" />
+         <xs:enumeration value="IT" />
+         <xs:enumeration value="JE" />
+         <xs:enumeration value="JM" />
+         <xs:enumeration value="JO" />
+         <xs:enumeration value="JP" />
+         <xs:enumeration value="KE" />
+         <xs:enumeration value="KG" />
+         <xs:enumeration value="KH" />
+         <xs:enumeration value="KI" />
+         <xs:enumeration value="KM" />
+         <xs:enumeration value="KN" />
+         <xs:enumeration value="KP" />
+         <xs:enumeration value="KR" />
+         <xs:enumeration value="KW" />
+         <xs:enumeration value="KY" />
+         <xs:enumeration value="KZ" />
+         <xs:enumeration value="LA" />
+         <xs:enumeration value="LB" />
+         <xs:enumeration value="LC" />
+         <xs:enumeration value="LI" />
+         <xs:enumeration value="LK" />
+         <xs:enumeration value="LR" />
+         <xs:enumeration value="LS" />
+         <xs:enumeration value="LT" />
+         <xs:enumeration value="LU" />
+         <xs:enumeration value="LV" />
+         <xs:enumeration value="LY" />
+         <xs:enumeration value="MA" />
+         <xs:enumeration value="MC" />
+         <xs:enumeration value="MD" />
+         <xs:enumeration value="ME" />
+         <xs:enumeration value="MF" />
+         <xs:enumeration value="MG" />
+         <xs:enumeration value="MH" />
+         <xs:enumeration value="MK" />
+         <xs:enumeration value="ML" />
+         <xs:enumeration value="MM" />
+         <xs:enumeration value="MN" />
+         <xs:enumeration value="MO" />
+         <xs:enumeration value="MP" />
+         <xs:enumeration value="MQ" />
+         <xs:enumeration value="MR" />
+         <xs:enumeration value="MS" />
+         <xs:enumeration value="MT" />
+         <xs:enumeration value="MU" />
+         <xs:enumeration value="MV" />
+         <xs:enumeration value="MW" />
+         <xs:enumeration value="MX" />
+         <xs:enumeration value="MY" />
+         <xs:enumeration value="MZ" />
+         <xs:enumeration value="NA" />
+         <xs:enumeration value="NC" />
+         <xs:enumeration value="NE" />
+         <xs:enumeration value="NF" />
+         <xs:enumeration value="NG" />
+         <xs:enumeration value="NI" />
+         <xs:enumeration value="NL" />
+         <xs:enumeration value="NO" />
+         <xs:enumeration value="NP" />
+         <xs:enumeration value="NR" />
+         <xs:enumeration value="NU" />
+         <xs:enumeration value="NZ" />
+         <xs:enumeration value="OM" />
+         <xs:enumeration value="PA" />
+         <xs:enumeration value="PE" />
+         <xs:enumeration value="PF" />
+         <xs:enumeration value="PG" />
+         <xs:enumeration value="PH" />
+         <xs:enumeration value="PK" />
+         <xs:enumeration value="PL" />
+         <xs:enumeration value="PM" />
+         <xs:enumeration value="PN" />
+         <xs:enumeration value="PR" />
+         <xs:enumeration value="PS" />
+         <xs:enumeration value="PT" />
+         <xs:enumeration value="PW" />
+         <xs:enumeration value="PY" />
+         <xs:enumeration value="QA" />
+         <xs:enumeration value="RE" />
+         <xs:enumeration value="RO" />
+         <xs:enumeration value="RS" />
+         <xs:enumeration value="RU" />
+         <xs:enumeration value="RW" />
+         <xs:enumeration value="SA" />
+         <xs:enumeration value="SB" />
+         <xs:enumeration value="SC" />
+         <xs:enumeration value="SD" />
+         <xs:enumeration value="SE" />
+         <xs:enumeration value="SG" />
+         <xs:enumeration value="SH" />
+         <xs:enumeration value="SI" />
+         <xs:enumeration value="SJ" />
+         <xs:enumeration value="SK" />
+         <xs:enumeration value="SL" />
+         <xs:enumeration value="SM" />
+         <xs:enumeration value="SN" />
+         <xs:enumeration value="SO" />
+         <xs:enumeration value="SR" />
+         <xs:enumeration value="SS" />
+         <xs:enumeration value="ST" />
+         <xs:enumeration value="SV" />
+         <xs:enumeration value="SX" />
+         <xs:enumeration value="SY" />
+         <xs:enumeration value="SZ" />
+         <xs:enumeration value="TC" />
+         <xs:enumeration value="TD" />
+         <xs:enumeration value="TF" />
+         <xs:enumeration value="TG" />
+         <xs:enumeration value="TH" />
+         <xs:enumeration value="TJ" />
+         <xs:enumeration value="TK" />
+         <xs:enumeration value="TL" />
+         <xs:enumeration value="TM" />
+         <xs:enumeration value="TN" />
+         <xs:enumeration value="TO" />
+         <xs:enumeration value="TR" />
+         <xs:enumeration value="TT" />
+         <xs:enumeration value="TV" />
+         <xs:enumeration value="TW" />
+         <xs:enumeration value="TZ" />
+         <xs:enumeration value="UA" />
+         <xs:enumeration value="UG" />
+         <xs:enumeration value="UM" />
+         <xs:enumeration value="US" />
+         <xs:enumeration value="UY" />
+         <xs:enumeration value="UZ" />
+         <xs:enumeration value="VA" />
+         <xs:enumeration value="VC" />
+         <xs:enumeration value="VE" />
+         <xs:enumeration value="VG" />
+         <xs:enumeration value="VI" />
+         <xs:enumeration value="VN" />
+         <xs:enumeration value="VU" />
+         <xs:enumeration value="WF" />
+         <xs:enumeration value="WS" />
+         <xs:enumeration value="YE" />
+         <xs:enumeration value="YT" />
+         <xs:enumeration value="ZA" />
+         <xs:enumeration value="ZM" />
+         <xs:enumeration value="ZW" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="licenceType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="CC BY" />
+         <xs:enumeration value="CC BY-NC" />
+         <xs:enumeration value="CC BY-NC-SA" />
+         <xs:enumeration value="CC BY-NC-ND" />
+         <xs:enumeration value="CC BY-SA" />
+         <xs:enumeration value="CC BY-ND" />
+         <xs:enumeration value="OTHER" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="referenceLength">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Reference content must be 25 to 5000 characters long</xs:documentation>
+         <xs:documentation xml:lang="pl">Przypis bibliograficzny musi posiadać od 25 do 5000 znaków</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:minLength value="25" />
+         <xs:maxLength value="5000" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="abstractLength">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Abstract must be at least 25 characters long</xs:documentation>
+         <xs:documentation xml:lang="pl">Streszczenie musi posiadać minumum 25 znaków</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:minLength value="25" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="gicidType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">GICID number</xs:documentation>
+         <xs:documentation xml:lang="pl">Numer GICID</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="\d{2}\.\d{4}\.\d{4}\.\d{4}" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="orcidType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">ORCID number</xs:documentation>
+         <xs:documentation xml:lang="pl">Numer ORCID</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="((https?://orcid.org/)?[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[X0-9]{1}|.{0})" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="emailType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">E-mail address</xs:documentation>
+         <xs:documentation xml:lang="pl">Adres e-mail</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="([^@ ]+@[^. ]+\..+|.{0})" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="pageNumber">
+      <xs:restriction base="xs:integer">
+         <xs:minInclusive value="0" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="startNumber">
+      <xs:restriction base="xs:integer">
+         <xs:minInclusive value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="languageType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Language code according to ISO 639-1.</xs:documentation>
+         <xs:documentation xml:lang="pl">Kod języka zgodny z ISO 639-1.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="aa" />
+         <xs:enumeration value="ab" />
+         <xs:enumeration value="ae" />
+         <xs:enumeration value="af" />
+         <xs:enumeration value="ak" />
+         <xs:enumeration value="am" />
+         <xs:enumeration value="an" />
+         <xs:enumeration value="ar" />
+         <xs:enumeration value="as" />
+         <xs:enumeration value="av" />
+         <xs:enumeration value="ay" />
+         <xs:enumeration value="az" />
+         <xs:enumeration value="ba" />
+         <xs:enumeration value="be" />
+         <xs:enumeration value="bg" />
+         <xs:enumeration value="bh" />
+         <xs:enumeration value="bi" />
+         <xs:enumeration value="bm" />
+         <xs:enumeration value="bn" />
+         <xs:enumeration value="bo" />
+         <xs:enumeration value="br" />
+         <xs:enumeration value="bs" />
+         <xs:enumeration value="ca" />
+         <xs:enumeration value="ce" />
+         <xs:enumeration value="ch" />
+         <xs:enumeration value="co" />
+         <xs:enumeration value="cr" />
+         <xs:enumeration value="cs" />
+         <xs:enumeration value="cu" />
+         <xs:enumeration value="cv" />
+         <xs:enumeration value="cy" />
+         <xs:enumeration value="da" />
+         <xs:enumeration value="de" />
+         <xs:enumeration value="dv" />
+         <xs:enumeration value="dz" />
+         <xs:enumeration value="ee" />
+         <xs:enumeration value="el" />
+         <xs:enumeration value="en" />
+         <xs:enumeration value="eo" />
+         <xs:enumeration value="es" />
+         <xs:enumeration value="et" />
+         <xs:enumeration value="eu" />
+         <xs:enumeration value="fa" />
+         <xs:enumeration value="ff" />
+         <xs:enumeration value="fi" />
+         <xs:enumeration value="fj" />
+         <xs:enumeration value="fo" />
+         <xs:enumeration value="fr" />
+         <xs:enumeration value="fy" />
+         <xs:enumeration value="ga" />
+         <xs:enumeration value="gd" />
+         <xs:enumeration value="gl" />
+         <xs:enumeration value="gn" />
+         <xs:enumeration value="gu" />
+         <xs:enumeration value="gv" />
+         <xs:enumeration value="ha" />
+         <xs:enumeration value="he" />
+         <xs:enumeration value="hi" />
+         <xs:enumeration value="ho" />
+         <xs:enumeration value="hr" />
+         <xs:enumeration value="ht" />
+         <xs:enumeration value="hu" />
+         <xs:enumeration value="hy" />
+         <xs:enumeration value="hz" />
+         <xs:enumeration value="ia" />
+         <xs:enumeration value="id" />
+         <xs:enumeration value="ie" />
+         <xs:enumeration value="ig" />
+         <xs:enumeration value="ii" />
+         <xs:enumeration value="ik" />
+         <xs:enumeration value="io" />
+         <xs:enumeration value="is" />
+         <xs:enumeration value="it" />
+         <xs:enumeration value="iu" />
+         <xs:enumeration value="ja" />
+         <xs:enumeration value="jw" />
+         <xs:enumeration value="ka" />
+         <xs:enumeration value="kg" />
+         <xs:enumeration value="ki" />
+         <xs:enumeration value="kj" />
+         <xs:enumeration value="kk" />
+         <xs:enumeration value="kl" />
+         <xs:enumeration value="km" />
+         <xs:enumeration value="kn" />
+         <xs:enumeration value="ko" />
+         <xs:enumeration value="kr" />
+         <xs:enumeration value="ks" />
+         <xs:enumeration value="ku" />
+         <xs:enumeration value="kv" />
+         <xs:enumeration value="kw" />
+         <xs:enumeration value="ky" />
+         <xs:enumeration value="la" />
+         <xs:enumeration value="lb" />
+         <xs:enumeration value="lg" />
+         <xs:enumeration value="li" />
+         <xs:enumeration value="ln" />
+         <xs:enumeration value="lo" />
+         <xs:enumeration value="lt" />
+         <xs:enumeration value="lu" />
+         <xs:enumeration value="lv" />
+         <xs:enumeration value="mg" />
+         <xs:enumeration value="mu" />
+         <xs:enumeration value="mi" />
+         <xs:enumeration value="mk" />
+         <xs:enumeration value="ml" />
+         <xs:enumeration value="mn" />
+         <xs:enumeration value="mr" />
+         <xs:enumeration value="ms" />
+         <xs:enumeration value="mt" />
+         <xs:enumeration value="my" />
+         <xs:enumeration value="na" />
+         <xs:enumeration value="nb" />
+         <xs:enumeration value="nd" />
+         <xs:enumeration value="ne" />
+         <xs:enumeration value="ng" />
+         <xs:enumeration value="nl" />
+         <xs:enumeration value="nn" />
+         <xs:enumeration value="no" />
+         <xs:enumeration value="nr" />
+         <xs:enumeration value="nv" />
+         <xs:enumeration value="ny" />
+         <xs:enumeration value="oc" />
+         <xs:enumeration value="oj" />
+         <xs:enumeration value="om" />
+         <xs:enumeration value="or" />
+         <xs:enumeration value="os" />
+         <xs:enumeration value="pa" />
+         <xs:enumeration value="pi" />
+         <xs:enumeration value="pl" />
+         <xs:enumeration value="ps" />
+         <xs:enumeration value="pt" />
+         <xs:enumeration value="qu" />
+         <xs:enumeration value="rm" />
+         <xs:enumeration value="rn" />
+         <xs:enumeration value="ro" />
+         <xs:enumeration value="ru" />
+         <xs:enumeration value="rw" />
+         <xs:enumeration value="sa" />
+         <xs:enumeration value="sc" />
+         <xs:enumeration value="sd" />
+         <xs:enumeration value="se" />
+         <xs:enumeration value="sg" />
+         <xs:enumeration value="si" />
+         <xs:enumeration value="sk" />
+         <xs:enumeration value="sl" />
+         <xs:enumeration value="sm" />
+         <xs:enumeration value="sn" />
+         <xs:enumeration value="so" />
+         <xs:enumeration value="sq" />
+         <xs:enumeration value="sr" />
+         <xs:enumeration value="ss" />
+         <xs:enumeration value="st" />
+         <xs:enumeration value="su" />
+         <xs:enumeration value="sv" />
+         <xs:enumeration value="sw" />
+         <xs:enumeration value="ta" />
+         <xs:enumeration value="te" />
+         <xs:enumeration value="tg" />
+         <xs:enumeration value="th" />
+         <xs:enumeration value="ti" />
+         <xs:enumeration value="tk" />
+         <xs:enumeration value="tl" />
+         <xs:enumeration value="tn" />
+         <xs:enumeration value="to" />
+         <xs:enumeration value="tr" />
+         <xs:enumeration value="ts" />
+         <xs:enumeration value="tt" />
+         <xs:enumeration value="tw" />
+         <xs:enumeration value="ty" />
+         <xs:enumeration value="ug" />
+         <xs:enumeration value="uk" />
+         <xs:enumeration value="ur" />
+         <xs:enumeration value="uz" />
+         <xs:enumeration value="ve" />
+         <xs:enumeration value="vi" />
+         <xs:enumeration value="vo" />
+         <xs:enumeration value="wa" />
+         <xs:enumeration value="wo" />
+         <xs:enumeration value="xh" />
+         <xs:enumeration value="yi" />
+         <xs:enumeration value="yo" />
+         <xs:enumeration value="za" />
+         <xs:enumeration value="zh" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="shortStringType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Variable up to 250 characters long</xs:documentation>
+         <xs:documentation xml:lang="pl">Zmienna o długości maksymalnie 250 znaków</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="250" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="longStringType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Text variable up to 2048 characters long</xs:documentation>
+         <xs:documentation xml:lang="pl">Zmienna tekstowa o długości maksymalnie 2048 znaków</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="2048" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="doiType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">DOI number</xs:documentation>
+         <xs:documentation xml:lang="pl">Numer DOI</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="(10\.[0-9]{4,9}/.{1,200}|.{0})" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="fileURLType">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">URL to the shared file</xs:documentation>
+         <xs:documentation xml:lang="pl">URL do udostępnionego pliku</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="((https?:\/\/|ftps?:\/\/).+|.{0})" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="dateType">
+      <xs:restriction base="xs:date">
+         <xs:minExclusive value="1900-01-01" />
+         <xs:maxExclusive value="2050-01-01" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="dateYear">
+      <xs:restriction base="xs:integer">
+         <xs:minExclusive value="1900" />
+         <xs:maxExclusive value="2050" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="issnType">
+      <xs:restriction base="xs:string">
+         <xs:minLength value="8" />
+         <xs:maxLength value="9" />
+         <xs:pattern value="\d{4}-?\d{3}[\dX]" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="roleType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="LEAD_AUTHOR">
+            <xs:annotation>
+               <xs:documentation>Lead author / Główny Autor</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="AUTHOR">
+            <xs:annotation>
+               <xs:documentation>Author (including co-author) / Autor (w tym Współautor)</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="RESEARCH_PROJECT">
+            <xs:annotation>
+               <xs:documentation>Research project / Projekt Badań</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="RESEARCH_EXECUTION">
+            <xs:annotation>
+               <xs:documentation>Research execution / Wykonanie Badań</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="STATISTICAL_ANALYSIS">
+            <xs:annotation>
+               <xs:documentation>Statistical analysis / Analiza Statystyczna</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DATA_INTERPRETATION">
+            <xs:annotation>
+               <xs:documentation>Data interpretation / Interpretacja Danych</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="MANUSCRIPT_PREPARATION">
+            <xs:annotation>
+               <xs:documentation>Manuscript preparation / Przygotowanie Manuskryptu</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="LITERATURE_OVERVIEW">
+            <xs:annotation>
+               <xs:documentation>Literature overview / Przegląd Piśmiennictwa</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="RESEARCH_FUNDING">
+            <xs:annotation>
+               <xs:documentation>Research Funding / Finansowanie Badań</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="articleType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="ORIGINAL_ARTICLE" />
+         <xs:enumeration value="REVIEW_ARTICLE" />
+         <xs:enumeration value="SHORT_COMMUNICATION" />
+         <xs:enumeration value="COMMENTARY_ON_THE_LAW" />
+         <xs:enumeration value="SCIENTIFIC_REVIEW" />
+         <xs:enumeration value="GUIDELINES" />
+         <xs:enumeration value="POPULAR_SCIENCE_ARTICLE" />
+         <xs:enumeration value="OTHERS_NONCITABLE" />
+         <xs:enumeration value="OTHERS_CITABLE" />
+         <xs:enumeration value="CASE_STUDY" />
+         <xs:enumeration value="EDITORIAL" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="disciplineScienceType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="DS010101N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">archaeology</xs:documentation>
+               <xs:documentation xml:lang="pl">archeologia</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010102N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">philosophy</xs:documentation>
+               <xs:documentation xml:lang="pl">filozofia</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010103N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">history</xs:documentation>
+               <xs:documentation xml:lang="pl">historia</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010104N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">linguistics</xs:documentation>
+               <xs:documentation xml:lang="pl">językoznawstwo</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010105N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">literary studies</xs:documentation>
+               <xs:documentation xml:lang="pl">literaturoznawstwo</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010106N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">culture and religion studies</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o kulturze i religii</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010107N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">arts studies</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o sztuce</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010201N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">architecture and urban planning</xs:documentation>
+               <xs:documentation xml:lang="pl">architektura i urbanistyka</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010202N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">biomedical engineering</xs:documentation>
+               <xs:documentation xml:lang="pl">inżynieria biomedyczna</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010203N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">automation, electronic and electrical engineering</xs:documentation>
+               <xs:documentation xml:lang="pl">automatyka, elektronika i elektrotechnika</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010204N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">information and communication technology</xs:documentation>
+               <xs:documentation xml:lang="pl">informatyka techniczna i telekomunikacja</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010205N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">chemical engineering</xs:documentation>
+               <xs:documentation xml:lang="pl">inżynieria chemiczna</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010206N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">civil engineering and transport</xs:documentation>
+               <xs:documentation xml:lang="pl">inżynieria lądowa i transport</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010207N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">materials engineering</xs:documentation>
+               <xs:documentation xml:lang="pl">inżynieria materiałowa</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010208N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">mechanical engineering</xs:documentation>
+               <xs:documentation xml:lang="pl">inżynieria mechaniczna</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010209N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">environmental engineering, mining and energy</xs:documentation>
+               <xs:documentation xml:lang="pl">inżynieria środowiska, górnictwo i energetyka</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010301N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">pharmacology and pharmacy</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki farmaceutyczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010302N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">physical culture science</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o kulturze fizycznej</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010303N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">health sciences</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o zdrowiu</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010304N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">medical sciences</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki medyczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010401N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">agriculture and horticulture</xs:documentation>
+               <xs:documentation xml:lang="pl">rolnictwo i ogrodnictwo</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010402N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">nutrition and food technology</xs:documentation>
+               <xs:documentation xml:lang="pl">technologia żywności i żywienia</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010403N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">veterinary science</xs:documentation>
+               <xs:documentation xml:lang="pl">weterynaria</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010404N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">animal science and fisheries</xs:documentation>
+               <xs:documentation xml:lang="pl">zootechnika i rybactwo</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010405N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">forestry</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki leśne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010501N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">economics and finance</xs:documentation>
+               <xs:documentation xml:lang="pl">ekonomia i finanse</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010502N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">social and economic geography and spatial management</xs:documentation>
+               <xs:documentation xml:lang="pl">geografia społeczno-ekonomiczna i gospodarka przestrzenna</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010503N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">security studies</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o bezpieczeństwie</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010504N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">communication and media studies</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o komunikacji społecznej i mediach</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010505N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">political science and public administration</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o polityce i administracji</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010506N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">management and quality studies</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o zarządzaniu i jakości</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010507N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">law</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki prawne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010508N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">sociology</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki socjologiczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010509N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">education</xs:documentation>
+               <xs:documentation xml:lang="pl">pedagogika</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010510N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">canon law</xs:documentation>
+               <xs:documentation xml:lang="pl">prawo kanoniczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010511N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">psychology</xs:documentation>
+               <xs:documentation xml:lang="pl">psychologia</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010601N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">computer and information sciences</xs:documentation>
+               <xs:documentation xml:lang="pl">informatyka</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010602N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">mathematics</xs:documentation>
+               <xs:documentation xml:lang="pl">matematyka</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010603N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">biological sciences</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki biologiczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010604N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">chemical sciences</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki chemiczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010605N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">physical sciences</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki fizyczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010606N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">Earth and related environmental sciences</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki o Ziemi i środowisku</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010607N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">astronomy</xs:documentation>
+               <xs:documentation xml:lang="pl">astronomia</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010701N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">theology</xs:documentation>
+               <xs:documentation xml:lang="pl">nauki teologiczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010801N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">film and theatre</xs:documentation>
+               <xs:documentation xml:lang="pl">sztuki filmowe i teatralne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010802N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">music</xs:documentation>
+               <xs:documentation xml:lang="pl">sztuki muzyczne</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="DS010803N">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">fine arts and art conservation</xs:documentation>
+               <xs:documentation xml:lang="pl">sztuki plastyczne i konserwacja dzieł sztuki</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="ici-import">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Top level element for a issues and content metadata submission to ICI World of Journals. This element indicates start and end of the XML file.</xs:documentation>
+         <xs:documentation xml:lang="pl">Element najwyższego poziomu dla metadanych wydań i zawartości wdrywanych do ICI World of Journals. Ten element wskazuje początek i koniec pliku XML.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="journal" nillable="false">
+               <xs:annotation>
+                  <xs:documentation xml:lang="en">The container for all information about a journal for which we want to import issues and contents.</xs:documentation>
+                  <xs:documentation xml:lang="pl">Kontener zawierający metadane czasopisma dla którego importujemy wydania i zawartość</xs:documentation>
+               </xs:annotation>
+               <xs:complexType>
+                  <xs:attribute name="issn" use="required" type="issnType">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">ISSN number of the journal</xs:documentation>
+                        <xs:documentation xml:lang="pl">Numer ISSN czasopisma</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="issue" maxOccurs="unbounded">
+               <xs:annotation>
+                  <xs:documentation xml:lang="en">The container for metadata that defines a single issue of a journal. If you want to import several issues, use several 'issue' containers.</xs:documentation>
+                  <xs:documentation xml:lang="pl">Kontener zawierający metadane pojedyńczego wydania czasopisma. W przypadku importu kilku wydań, użyj kilku kontenerów 'issue'.</xs:documentation>
+               </xs:annotation>
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="article" maxOccurs="unbounded">
+                        <xs:annotation>
+                           <xs:documentation xml:lang="en">The container for all information about a single journal article. A journal article is required to have at least one language version, one author and article type.</xs:documentation>
+                           <xs:documentation xml:lang="pl">Kontener zawierający informacje o pojedyńczym artykule. Powinien zawierać przyjajmniej jedną wersję językową, jednego autora i określenie typu artykułu.</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="type" type="articleType" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation xml:lang="en">Publication type. Please use only values from the list.</xs:documentation>
+                                    <xs:documentation xml:lang="pl">Typ artykułu. Zgodny z listą.</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element name="languageVersion" maxOccurs="unbounded">
+                                 <xs:annotation>
+                                    <xs:documentation xml:lang="en">The container for all information about a single language version of the publication. Each publication must contain at least one language version. The language versions of the publication, in the ICI World of Journals system, will be presented as separate publications.</xs:documentation>
+                                    <xs:documentation xml:lang="pl">Kontener zawierący informacje o pojedyńczej wersji językowej publikacji. Każda publikacja musi zawierać co najmniej jedną wersję językową. Wersje językowe publikacji, w systemie ICI World of Journals będą prezentoane jako oddzielne publikacje.</xs:documentation>
+                                 </xs:annotation>
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="title" type="xs:string" nillable="false" minOccurs="1" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">Title of the publication.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Tytuł publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="abstract" type="xs:string" nillable="false" minOccurs="0">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">Abstract of the publication.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Abstrakt publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="pdfFileUrl" type="fileURLType" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">URL to a file with an electronic version of the publication. Permitted formats are PDF. The file WILL BE shared publicly.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Adres URL do pliku z pełną, elektroniczną wersją publikacji. Dopuszczalny format to PDF. Plik będzie widoczny dla wszystkich w systemie ICI WOJ.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="articleUrl" type="fileURLType" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">URL for the article's website</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Adres URL do strony internetowej artykułu.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="receivedDate" type="dateType" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">Manuscript received date</xs:documentation>
+                                             <xs:documentation>Data otrzymania manuskryptu</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="acceptedDate" type="dateType" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">Manuscript acceptance date</xs:documentation>
+                                             <xs:documentation>Data akceptacji manuskryptu</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="publicationDate" type="dateType" minOccurs="1" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">Publication date.</xs:documentation>
+                                             <xs:documentation>Data publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="pageFrom" type="pageNumber" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">First page of the publication.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Numer pierwszej strony publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="pageTo" type="pageNumber" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">Last page of the publication.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Ostatnia strona publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="doi" type="doiType" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">DOI number of the publication.</xs:documentation>
+                                             <xs:documentation>Numer DOI publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element name="keywords" minOccurs="0">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">A container for keywords related to the language version of the publication. Must contain at least one keyword.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Kontener dla słów kluczowych związanych z wersją językową publikacji. Musi zawierać co namjniej jedno słowo kluczowe.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="keyword" type="shortStringType" minOccurs="1" maxOccurs="unbounded">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">A single keyword related to the language version of the publication.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Pojedyńcze słowo kluczowe związane z wersją językową publikacji.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="license" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">The license under which the publication was published. You should specify the license type and optionally provide a link to the document describing the license</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Licencja na jakiej została opublikowana publikacja. Określ typ licencji i opcjonalnie podaj link do dokumentu ze szczegółami.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                             <xs:simpleContent>
+                                                <xs:extension base="fileURLType">
+                                                   <xs:attribute name="type" type="licenceType" use="required">
+                                                      <xs:annotation>
+                                                         <xs:documentation xml:lang="en">License type</xs:documentation>
+                                                         <xs:documentation xml:lang="pl">Typ licencji</xs:documentation>
+                                                      </xs:annotation>
+                                                   </xs:attribute>
+                                                   <xs:attribute name="openAccess" type="xs:boolean" use="optional">
+                                                      <xs:annotation>
+                                                         <xs:documentation xml:lang="en">Open Access</xs:documentation>
+                                                         <xs:documentation xml:lang="pl">Open Access</xs:documentation>
+                                                      </xs:annotation>
+                                                   </xs:attribute>
+                                                </xs:extension>
+                                             </xs:simpleContent>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="antiplagiarismCheck" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">Article verified by the anti-plagiarism system</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Artyuł zweryfikowany przez system antyplagiatowy</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="externalId" type="shortStringType" use="optional">
+                                       <xs:annotation>
+                                          <xs:documentation xml:lang="en">A publisher identifier that can be used to uniquely identify the language version of the publication being registered. This identifier is a publisher-assigned number that uniquely identifies the language version of the publication.</xs:documentation>
+                                          <xs:documentation xml:lang="pl">Unikalny identyfikator wersji językowej publikacji, nadany przez wydawcę. Służy do jednoznacznego określenia wersji językowej publikacji w systemie wydawcy</xs:documentation>
+                                       </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="language" type="languageType" use="required">
+                                       <xs:annotation>
+                                          <xs:documentation xml:lang="en">Publication language code according to ISO 639. Default value: PL</xs:documentation>
+                                          <xs:documentation xml:lang="pl">Kod języka publikacji zgodny z ISO 639. Domyślnie wartość PL</xs:documentation>
+                                       </xs:annotation>
+                                    </xs:attribute>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="authors">
+                                 <xs:annotation>
+                                    <xs:documentation xml:lang="en">The container for all information about the contributors/authors of the publication. Must contain at least one contributor/author.</xs:documentation>
+                                    <xs:documentation xml:lang="pl">Kontener zawierający informacje o wszystkich autorach publikacji. Musi zawierać informacje o co najmniej jednym autorze.</xs:documentation>
+                                 </xs:annotation>
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="author" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">The container for all information about singe contributor/author of the publication.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Kontener zawierający informacje o pojedyńczym autorze publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="name" type="shortStringType" nillable="false" minOccurs="1" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">First name of the contributor/author. May be submitted as either a full first name or initials. Do not include titles such as "Prof.", "Dr." or other.</xs:documentation>
+                                                      <xs:documentation>Imię autora. Może być przesłane jako pełne imię lub inicjały. Nie zamieszczaj tytułów takich jak "Prof.", "Dr." lub innych.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="name2" type="shortStringType" minOccurs="0" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Second name of the contributor/author.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Drugie imię autora.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="surname" type="shortStringType" nillable="false" minOccurs="1" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Surname of the contributor/author.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Nazwisko autora</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="email" type="emailType" minOccurs="0" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Email of the contributor/author.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Email autora.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="order" type="startNumber" minOccurs="1" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Author's sequence/order number.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Numer kolejny autora</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="instituteAffiliation" type="longStringType" minOccurs="0" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">The institution with which a contributor/author is affiliated. This element may hold the name and location of an affiliation with which a contributor/author is affiliated.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Instutycja do której afiliuje autor.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="country" type="countryCodeType" minOccurs="0" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Country of the institution.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Kraj instytucji.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="role" type="roleType" minOccurs="1" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Role of the contributor/author. Please use only values from the list.</xs:documentation>
+                                                      <xs:documentation>Rola w powstaniu publikacji. Proszę używać tylko wartości z listy.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="ORCID" type="orcidType" minOccurs="0" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="EN">The ORCID for an contributor/author. Acceptable format: https://orcid.org/0000-0000-0000-0000 or 0000-0000-0000-0000</xs:documentation>
+                                                      <xs:documentation xml:lang="PL">Numer ORCID autora w formacie: https://orcid.org/0000-0000-0000-0000 lub 0000-0000-0000-0000</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="references" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation xml:lang="en">The container for all references/citations from the publication.</xs:documentation>
+                                    <xs:documentation xml:lang="pl">Kontener zawierający wszystkie referencje/cytowania z publikacji.</xs:documentation>
+                                 </xs:annotation>
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="reference" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                             <xs:documentation xml:lang="en">The container for all information about single reference/citation from publication.</xs:documentation>
+                                             <xs:documentation xml:lang="pl">Kontener zawierający wszystkie informacje o referencji/cytowaniu występującym w publikacji.</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="unparsedContent" type="referenceLength" nillable="false" minOccurs="1" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Reference/citation content string.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Treść referencji/cytowania.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="order" type="startNumber" minOccurs="1" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="en">Reference/citation sequence number.</xs:documentation>
+                                                      <xs:documentation xml:lang="pl">Numer kolejny referencji/cytowania.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="doi" type="doiType" minOccurs="0" maxOccurs="1">
+                                                   <xs:annotation>
+                                                      <xs:documentation xml:lang="EN">Reference/citation DOI number.</xs:documentation>
+                                                      <xs:documentation xml:lang="PL">Numer DOI referencji/cytowanej publikacji.</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="disciplineSciences" minOccurs="0">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="disciplineScience" type="disciplineScienceType" minOccurs="0" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="gicid" type="gicidType" use="optional">
+                              <xs:annotation>
+                                 <xs:documentation xml:lang="en">Publication's GICID identifier.</xs:documentation>
+                                 <xs:documentation xml:lang="pl">Identyfikator GICID publikacji</xs:documentation>
+                              </xs:annotation>
+                           </xs:attribute>
+                           <xs:attribute name="externalId" type="xs:string" use="optional">
+                              <xs:annotation>
+                                 <xs:documentation xml:lang="en">A publisher identifier that can be used to uniquely identify the publication being registered. This identifier is a publisher-assigned number that uniquely identifies the publication.</xs:documentation>
+                                 <xs:documentation xml:lang="pl">Unikalny identyfikator publikacji, nadany przez wydawcę. Służy do jednoznacznego określenia publikacji w systemie wydawcy</xs:documentation>
+                              </xs:annotation>
+                           </xs:attribute>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="number" type="shortStringType" use="optional">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">The issue number.</xs:documentation>
+                        <xs:documentation xml:lang="pl">Numer wydania</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="volume" type="shortStringType" use="required">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">The volume number</xs:documentation>
+                        <xs:documentation xml:lang="pl">Tom wydania</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="year" type="dateYear" use="required">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">Publication year</xs:documentation>
+                        <xs:documentation xml:lang="pl">Rok wydania</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="publicationDate" type="dateType" use="optional">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">Publication date</xs:documentation>
+                        <xs:documentation xml:lang="pl">Data publikacji</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="coverDate" type="shortStringType" use="optional">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">Date from the cover</xs:documentation>
+                        <xs:documentation xml:lang="pl">Data z okładki</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="coverUrl" type="fileURLType" use="optional">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">URL to the image with the cover of the issue. Acceptable image formats are JPEG and PNG. The maximum width of the image is 200px.</xs:documentation>
+                        <xs:documentation xml:lang="pl">Adres URL do obrazka z okładką wydania. Dopuszczalne formaty obrazka to JPEG i PNG. Maksymalna szerokość obrazkato 200px.</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="numberOfArticles" type="startNumber" use="optional">
+                     <xs:annotation>
+                        <xs:documentation xml:lang="en">Number of scientific articles in this issue.</xs:documentation>
+                        <xs:documentation xml:lang="pl">Liczba artykułów naukowych w tym wydaniu.</xs:documentation>
+                     </xs:annotation>
+                  </xs:attribute>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+      <xs:unique name="unique_article_id">
+         <xs:annotation>
+            <xs:documentation xml:lang="en">Article's @externalID sould appear only once</xs:documentation>
+            <xs:documentation xml:lang="pl">@ExternalID artykułu może pojawić się tylko raz</xs:documentation>
+         </xs:annotation>
+         <xs:selector xpath="issue/article" />
+         <xs:field xpath="@externalId" />
+      </xs:unique>
+      <xs:unique name="unique_article_gicid">
+         <xs:annotation>
+            <xs:documentation xml:lang="en">Article's @GICID sould appear only once</xs:documentation>
+            <xs:documentation xml:lang="pl">@GICID artykułu może pojawić się tylko raz</xs:documentation>
+         </xs:annotation>
+         <xs:selector xpath="issue/article" />
+         <xs:field xpath="@gicid" />
+      </xs:unique>
+   </xs:element>
+</xs:schema>

@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-08-27T00:00:00+00:00\n"
+"PO-Revision-Date: 2025-08-27T00:00:00+00:00\n"
+"Language: en\n"
+
+msgid "plugins.importexport.copernicus.displayName"
+msgstr "Index Copernicus Export Plugin"
+
+msgid "plugins.importexport.copernicus.description"
+msgstr "Export journal articles and issues to Index Copernicus XML format"
+
+msgid "plugins.importexport.copernicus.export"
+msgstr "Export"
+
+msgid "plugins.importexport.copernicus.export.issues"
+msgstr "Export Issues"
+
+msgid "plugins.importexport.copernicus.export.selectIssue"
+msgstr "Select issues to export to Index Copernicus format."
+
+msgid "plugins.importexport.copernicus.export.noIssues"
+msgstr "No published issues available for export."
+
+msgid "plugins.importexport.copernicus.export.success"
+msgstr "Export completed successfully."
+
+msgid "plugins.importexport.copernicus.export.error"
+msgstr "An error occurred during export."
+
+msgid "plugins.importexport.copernicus.cliUsage"
+msgstr "Usage: {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue_id1 [issue_id2] ..."
+
+msgid "plugins.importexport.copernicus.cliError"
+msgstr "ERROR:"
+
+msgid "plugins.importexport.copernicus.export.exportIssues"
+msgstr "Export Issues"
+
+msgid "plugins.importexport.copernicus.selectIssuesDescription"
+msgstr "Select the issues you would like to export. Only published issues are available for export."
+
+
+
+# --- Copernicus: missing keys for templates (EN) ---
+
+msgid "plugins.importexport.copernicus.exportByIssues"
+msgstr "Export by Issues"
+
+msgid "plugins.importexport.copernicus.export.issues.title"
+msgstr "Select Issues to Export"
+
+msgid "plugins.importexport.copernicus.export.issues.help"
+msgstr "Select one or more published issues, then click \"Export\" to download an XML file."
+
+msgid "plugins.importexport.copernicus.noIssues"
+msgstr "No published issues were found."
+
+
+msgid "plugins.importexport.copernicus.validateSchema"
+msgstr "Validate against schema"
+
+msgid "plugins.importexport.copernicus.validateSchema.help"
+msgstr "Validate the output XML against journal_import_ici.xsd and log any errors."
+
+msgid "plugins.importexport.copernicus.openIssues"
+msgstr "Open export by issues"
+

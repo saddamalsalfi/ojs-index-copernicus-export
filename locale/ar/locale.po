@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-08-27T00:00:00+00:00\n"
+"PO-Revision-Date: 2025-08-27T00:00:00+00:00\n"
+"Language: ar\n"
+
+msgid "plugins.importexport.copernicus.displayName"
+msgstr "إضافة تصدير Index Copernicus"
+
+msgid "plugins.importexport.copernicus.description"
+msgstr "تصدير مقالات وأعداد المجلة إلى تنسيق XML الخاص بـ Index Copernicus"
+
+msgid "plugins.importexport.copernicus.export"
+msgstr "تصدير"
+
+msgid "plugins.importexport.copernicus.export.issues"
+msgstr "تصدير الأعداد"
+
+msgid "plugins.importexport.copernicus.export.selectIssue"
+msgstr "اختر الأعداد المراد تصديرها إلى تنسيق Index Copernicus."
+
+msgid "plugins.importexport.copernicus.export.noIssues"
+msgstr "لا توجد أعداد منشورة متاحة للتصدير."
+
+msgid "plugins.importexport.copernicus.export.success"
+msgstr "تم التصدير بنجاح."
+
+msgid "plugins.importexport.copernicus.export.error"
+msgstr "حدث خطأ أثناء التصدير."
+
+msgid "plugins.importexport.copernicus.cliUsage"
+msgstr "الاستخدام: {$scriptName} {$pluginName} [xmlFileName] [journal_path] issue_id1 [issue_id2] ..."
+
+msgid "plugins.importexport.copernicus.cliError"
+msgstr "خطأ:"
+
+msgid "plugins.importexport.copernicus.export.exportIssues"
+msgstr "تصدير الأعداد"
+
+msgid "plugins.importexport.copernicus.selectIssuesDescription"
+msgstr "اختر الأعداد التي تريد تصديرها. الأعداد المنشورة فقط متاحة للتصدير."
+
+
+# --- Copernicus: missing keys for templates ---
+
+msgid "plugins.importexport.copernicus.exportByIssues"
+msgstr "التصدير حسب الأعداد"
+
+msgid "plugins.importexport.copernicus.export.issues.title"
+msgstr "اختر الأعداد للتصدير"
+
+msgid "plugins.importexport.copernicus.export.issues.help"
+msgstr "اختر عددًا أو أكثر من الأعداد المنشورة ثم اضغط «تصدير» لتنزيل ملف XML."
+
+msgid "plugins.importexport.copernicus.noIssues"
+msgstr "لا توجد أعداد منشورة."
+
+msgid "plugins.importexport.copernicus.validateSchema"
+msgstr "تحقق من المخطط (XSD) قبل التنزيل"
+
+msgid "plugins.importexport.copernicus.validateSchema.help"
+msgstr "يقوم بالتحقق من ملف XML الناتج وفق journal_import_ici.xsd ويُسجل الأخطاء في السجل."
+
+msgid "plugins.importexport.copernicus.openIssues"
+msgstr "فتح صفحة التصدير حسب الأعداد"
+
