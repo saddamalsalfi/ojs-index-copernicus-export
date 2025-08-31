@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: Index Copernicus (ICI) Export Plugin for OJS 3.5.0-1
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Al-Slfi
+    given-names: Saddam
+    affiliation: Queen Arwa University
+    email: saddamalsalfi@qau.edu.ye
+repository-code: https://github.com/saddamalsalfi/ojs-index-copernicus-export
+version: 2.0.0.0
+date-released: 2025-08-27
