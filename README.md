@@ -43,7 +43,8 @@ copernicus/
 │  ├─ index.tpl
 │  └─ issues.tpl
 ├─ locale/
-│  └─ en_US/… (and other locales as needed)
+│  └─ en/… (and other locales as needed)
+│  └─ ar/… (and other locales as needed)
 └─ README.md
 ```
 
