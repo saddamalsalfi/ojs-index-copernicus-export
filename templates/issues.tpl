@@ -8,7 +8,7 @@
   {assign var=pname value=$pluginName}
 {/if}
 
-{* افتراضيًا نجعل التحقق مفعّل ما لم يُمرَّر خلاف ذلك عبر GET/POST *}
+{* افتراضيًا نجعل التحقق مفعّل ما لم يُمرَّر خلاف ذلك عبر GET/POST *}
 {assign var=__validate value=$smarty.request.validateSchema|default:1}
 
 <div class="pkp_page_content pkp_page_importexport_plugins">
@@ -27,10 +27,10 @@
       <div class="field">
         <label class="context">
           <input type="checkbox" name="validateSchema" value="1" {if $__validate}checked{/if}>
-          {translate key="plugins.importexport.copernicus.validateSchema" default="Validate against schema"}
+          {translate key="plugins.importexport.copernicus.validateSchema"}
         </label>
         <div class="description">
-          {translate key="plugins.importexport.copernicus.validateSchema.help" default="Validate the output XML against the ICI XSD before download."}
+          {translate key="plugins.importexport.copernicus.validateSchema.help"}
         </div>
       </div>
     </fieldset>
