@@ -169,7 +169,7 @@ class CopernicusPlugin extends ImportExportPlugin
             'schemaPath'     => $schemaPath,
             // If Copernicus UI strictly requires affiliation, you can force fallback text:
             'forceAffiliationFallback' => true,             // <—
-            'affiliationFallbackText'  => 'QUEEN ARWA UNIVERSITY',
+            'affiliationFallbackText'  => 'No affiliation.',
         ]);
 
         $doc = $builder->buildDocument(); // DOMDocument
