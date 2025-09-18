@@ -168,7 +168,7 @@ class CopernicusPlugin extends ImportExportPlugin
             'validateSchema' => $validate,
             'schemaPath'     => $schemaPath,
             // If Copernicus UI strictly requires affiliation, you can force fallback text:
-            'forceAffiliationFallback' => true,             // <—
+            'forceAffiliationFallback' => false,             // <—
             'affiliationFallbackText'  => 'No affiliation.',
         ]);
 
