@@ -4,27 +4,27 @@
  * @brief Standalone XML builder & XSD validator for Index Copernicus (ICI) export, OJS 3.5.0-1.
  *
  * Architecture
- *  - DOAJ-like separation: all XML generation/validation logic is encapsulated here,
- *    while the plugin entry remains thin.
+ * - DOAJ-like separation: all XML generation/validation logic is encapsulated here,
+ * while the plugin entry remains thin.
  *
  * Features
- *  - <issue> elements are direct children of <ici-import>; <journal> is an empty
- *    element carrying the ISSN as an attribute only.
- *  - Multi-language <languageVersion> blocks for available locales.
- *  - Robust author handling (given/surname, optional middle name, ORCID, role).
- *  - DOAJ-style affiliation resolution via getLocalizedAffiliationNames() with fallbacks.
- *  - DOI normalization, CC license type mapping, optional XSD validation.
- *  - Schema path (default): plugins/importexport/copernicus/schema/journal_import_ici.xsd
+ * - <issue> elements are direct children of <ici-import>; <journal> is an empty
+ * element carrying the ISSN as an attribute only.
+ * - Multi-language <languageVersion> blocks for available locales.
+ * - Robust author handling (given/surname, optional middle name, ORCID, role).
+ * - DOAJ-style affiliation resolution via getLocalizedAffiliationNames() with fallbacks.
+ * - DOI normalization, CC license type mapping, optional XSD validation.
+ * - Schema path (default): plugins/importexport/copernicus/schema/journal_import_ici.xsd
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  * @license GPL-3.0-or-later https://www.gnu.org/licenses/gpl-3.0.html
  *
  * Upgraded for OJS 3.5 by:
- *   Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>
- *   Queen Arwa University
+ * Saddam Al-Slfi <saddamalsalfi@qau.edu.ye>
+ * Queen Arwa University
  *
  * Copyright (c) 2025
- *   Queen Arwa University
+ * Queen Arwa University
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -32,10 +32,6 @@
  * option) any later version.
  * See the LICENSE.txt file for details.
  */
-
-
-
-
 
 namespace APP\plugins\importexport\copernicus\classes;
 
@@ -64,8 +60,8 @@ class CopernicusXmlBuilder
         $this->journal = $journal;
         $this->issues  = $issues;
         $this->opts = array_merge([
-            'validateSchema'           => true,
-            'schemaPath'               => null,
+            'validateSchema'         => true,
+            'schemaPath'             => null,
             'forceAffiliationFallback' => false,
             'affiliationFallbackText'  => 'No data',
         ], $opts);
@@ -189,14 +185,16 @@ class CopernicusXmlBuilder
         // title (optional in practice; add when available)
         $title = $this->getFromBag($publication->getData('title'), $locale);
         if ($title !== '') {
-            $e = $this->doc->createElement('title'); $e->appendChild($this->cdata($title));
+            // MODIFIED: Replaced cdata() with textNode() for standard XML practice.
+            $e = $this->doc->createElement('title'); $e->appendChild($this->textNode($title));
             $lv->appendChild($e);
         }
 
         // abstract (optional)
         $abstract = $this->getFromBag($publication->getData('abstract'), $locale);
         if ($abstract !== '') {
-            $e = $this->doc->createElement('abstract'); $e->appendChild($this->cdata(strip_tags((string)$abstract)));
+            // MODIFIED: Replaced cdata() with textNode() for standard XML practice.
+            $e = $this->doc->createElement('abstract'); $e->appendChild($this->textNode(strip_tags((string)$abstract)));
             $lv->appendChild($e);
         }
 
@@ -209,7 +207,8 @@ class CopernicusXmlBuilder
                 foreach ($kwForLocale as $kw) {
                     $kwStr = $this->pickFirstString($kw);
                     if ($kwStr === '') continue;
-                    $k = $this->doc->createElement('keyword'); $k->appendChild($this->cdata($kwStr));
+                    // MODIFIED: Replaced cdata() with textNode() for standard XML practice.
+                    $k = $this->doc->createElement('keyword'); $k->appendChild($this->textNode($kwStr));
                     $ks->appendChild($k);
                 }
                 if ($ks->hasChildNodes()) $lv->appendChild($ks);
@@ -269,20 +268,25 @@ class CopernicusXmlBuilder
         return $lv;
     }
 
-    /**
+/**
      * <authors> (>=1). For each <author>:
-     *   Required: <name> (given), <surname> (family), <order>
-     *   Optional: <name2>, <email>, <instituteAffiliation>, <country>, <role>, <ORCID>
+     * Required: <name> (given), <surname> (family), <order>
+     * Optional: <name2>, <email>, <instituteAffiliation>, <country>, <role>, <ORCID>
      *
      * Affiliation uses DOAJ-like approach:
-     *   - Prefer $author->getLocalizedAffiliationNames($publication->getData('locale')) if available
-     *   - Else fallback to localized string/bag
-     *   - Join multiple affiliations with " ; " to one string field Copernicus expects
+     * - Prefer $author->getLocalizedAffiliationNames($publication->getData('locale')) if available
+     * - Else fallback to localized string/bag
+     * - Join multiple affiliations with " ; " to one string field Copernicus expects
      */
     private function buildAuthors($publication): \DOMElement
     {
         $authorsElem = $this->doc->createElement('authors');
         $authors = $publication->getData('authors') ?: [];
+        $primaryContactId = $publication->getData('primaryContactId');
+        
+        // NEW: Get the publication's primary locale to give it priority when picking names.
+        $publicationLocale = $publication->getData('locale') ?: $this->journal->getPrimaryLocale();
+
         $index = 1;
 
         foreach ($authors as $author) {
@@ -291,10 +295,14 @@ class CopernicusXmlBuilder
             $givenBag  = $isObj ? ($author->getData('givenName') ?? null)  : ($author['givenName'] ?? null);
             $familyBag = $isObj ? ($author->getData('familyName') ?? null) : ($author['familyName'] ?? null);
             $publicBag = $isObj ? ($author->getData('preferredPublicName') ?? null) : ($author['preferredPublicName'] ?? null);
+            
+            // NEW: Create a dynamic list of preferred locales, starting with the publication's own language.
+            $preferredLocales = array_unique(array_merge([$publicationLocale], $this->preferredLatinLocales()));
 
-            $firstName = trim($this->pickByLocales($givenBag,  $this->preferredLatinLocales()));
-            $lastName  = trim($this->pickByLocales($familyBag, $this->preferredLatinLocales()));
-            $public    = trim($this->pickByLocales($publicBag, $this->preferredLatinLocales()));
+            // MODIFIED: Use the new dynamic list of locales to pick names.
+            $firstName = trim($this->pickByLocales($givenBag,  $preferredLocales));
+            $lastName  = trim($this->pickByLocales($familyBag, $preferredLocales));
+            $public    = trim($this->pickByLocales($publicBag, $preferredLocales));
 
             // If familyName missing but public has multiple tokens, split last token as surname
             if ($lastName === '' && $public !== '') {
@@ -340,12 +348,12 @@ class CopernicusXmlBuilder
             }
 
             $a = $this->doc->createElement('author');
-
-            $e = $this->doc->createElement('name'); $e->appendChild($this->cdata($firstName)); $a->appendChild($e);
+            
+            $e = $this->doc->createElement('name'); $e->appendChild($this->textNode($firstName)); $a->appendChild($e);
             if ($middleName !== '') {
-                $e = $this->doc->createElement('name2'); $e->appendChild($this->cdata($middleName)); $a->appendChild($e);
+                $e = $this->doc->createElement('name2'); $e->appendChild($this->textNode($middleName)); $a->appendChild($e);
             }
-            $e = $this->doc->createElement('surname'); $e->appendChild($this->cdata($lastName)); $a->appendChild($e);
+            $e = $this->doc->createElement('surname'); $e->appendChild($this->textNode($lastName)); $a->appendChild($e);
 
             if ($email !== '') {
                 $a->appendChild($this->doc->createElement('email', $email));
@@ -357,20 +365,23 @@ class CopernicusXmlBuilder
             // instituteAffiliation (often required by Copernicus UI)
             if ($affiliation !== '') {
                 $affEl = $this->doc->createElement('instituteAffiliation');
-                $affEl->appendChild($this->cdata($affiliation));
+                $affEl->appendChild($this->textNode($affiliation));
                 $a->appendChild($affEl);
             } elseif (!empty($this->opts['forceAffiliationFallback'])) {
                 $affEl = $this->doc->createElement('instituteAffiliation');
-                $affEl->appendChild($this->cdata($this->opts['affiliationFallbackText']));
+                $affEl->appendChild($this->textNode($this->opts['affiliationFallbackText']));
                 $a->appendChild($affEl);
             }
 
             if ($country !== '') {
                 $a->appendChild($this->doc->createElement('country', $country));
             }
+            
+            $isPrimaryContact = $isObj && ($author->getId() == $primaryContactId);
+            $role = $isPrimaryContact ? 'LEAD_AUTHOR' : 'AUTHOR';
+            $a->appendChild($this->doc->createElement('role', $role));
 
-            $a->appendChild($this->doc->createElement('role', $index === 1 ? 'LEAD_AUTHOR' : 'AUTHOR'));
-            if ($orcid !== '') {
+            if ($orcid !== '' && $isObj && method_exists($author, 'hasVerifiedOrcid') && $author->hasVerifiedOrcid()) {
                 $a->appendChild($this->doc->createElement('ORCID', $orcid));
             }
 
@@ -381,6 +392,7 @@ class CopernicusXmlBuilder
         return $authorsElem;
     }
 
+    
     /** <references> (optional) — XSD sequence: unparsedContent -> order -> (doi) */
     private function buildReferences($publication): ?\DOMElement
     {
@@ -400,7 +412,8 @@ class CopernicusXmlBuilder
 
             // 1) unparsedContent (REQUIRED, must come first)
             $content = $this->doc->createElement('unparsedContent');
-            $content->appendChild($this->cdata($citation));
+            // MODIFIED: Replaced cdata() with textNode() for standard XML practice.
+            $content->appendChild($this->textNode($citation));
             $ref->appendChild($content);
 
             // 2) order (REQUIRED)
@@ -491,9 +504,11 @@ class CopernicusXmlBuilder
 
     private function isNonEmptyString($v): bool { return is_string($v) && $v !== ''; }
 
-    private function cdata($value): \DOMCdataSection
+    // NEW: Replaced cdata() with textNode() for standard XML creation.
+    // This allows the DOMDocument library to handle special character escaping automatically.
+    private function textNode($value): \DOMText
     {
-        return $this->doc->createCDATASection($this->pickFirstString($value));
+        return $this->doc->createTextNode($this->pickFirstString($value));
     }
 
     /** Prefer Latin locales first (EN*), then others (Arabic last) */
@@ -579,7 +594,7 @@ class CopernicusXmlBuilder
     /**
      * Resolve author's affiliation (DOAJ-like):
      * 1) If available, use Author::getLocalizedAffiliationNames($publication->getData('locale')) → array of strings.
-     *    Join unique non-empty entries with " ; " (Copernicus expects a single text field).
+     * Join unique non-empty entries with " ; " (Copernicus expects a single text field).
      * 2) Else, try getLocalizedAffiliation($locale) / getLocalizedData('affiliation').
      * 3) Else, use raw data bag 'affiliation' (string or localized array) with Latin-first picking.
      */
