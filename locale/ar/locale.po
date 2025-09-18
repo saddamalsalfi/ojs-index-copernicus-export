@@ -71,3 +71,9 @@ msgstr "يقوم بالتحقق من ملف XML الناتج وفق journal_impo
 msgid "plugins.importexport.copernicus.openIssues"
 msgstr "فتح صفحة التصدير حسب الأعداد"
 
+# NEW: Added missing common keys
+msgid "common.selectAll"
+msgstr "تحديد الكل"
+
+msgid "common.back"
+msgstr "رجوع"
