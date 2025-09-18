@@ -47,8 +47,6 @@ msgstr "Export Issues"
 msgid "plugins.importexport.copernicus.selectIssuesDescription"
 msgstr "Select the issues you would like to export. Only published issues are available for export."
 
-
-
 # --- Copernicus: missing keys for templates (EN) ---
 
 msgid "plugins.importexport.copernicus.exportByIssues"
@@ -63,7 +61,6 @@ msgstr "Select one or more published issues, then click \"Export\" to download a
 msgid "plugins.importexport.copernicus.noIssues"
 msgstr "No published issues were found."
 
-
 msgid "plugins.importexport.copernicus.validateSchema"
 msgstr "Validate against schema"
 
@@ -73,3 +70,9 @@ msgstr "Validate the output XML against journal_import_ici.xsd and log any error
 msgid "plugins.importexport.copernicus.openIssues"
 msgstr "Open export by issues"
 
+# NEW: Added missing common keys
+msgid "common.selectAll"
+msgstr "Select All"
+
+msgid "common.back"
+msgstr "Back"
