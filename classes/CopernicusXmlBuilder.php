@@ -198,23 +198,6 @@ class CopernicusXmlBuilder
             $lv->appendChild($e);
         }
 
-        // keywords (optional)
-        $kwBag = $publication->getData('keywords');
-        if (is_array($kwBag)) {
-            $kwForLocale = $kwBag[$locale] ?? null;
-            if (is_array($kwForLocale) && !empty($kwForLocale)) {
-                $ks = $this->doc->createElement('keywords');
-                foreach ($kwForLocale as $kw) {
-                    $kwStr = $this->pickFirstString($kw);
-                    if ($kwStr === '') continue;
-                    // MODIFIED: Replaced cdata() with textNode() for standard XML practice.
-                    $k = $this->doc->createElement('keyword'); $k->appendChild($this->textNode($kwStr));
-                    $ks->appendChild($k);
-                }
-                if ($ks->hasChildNodes()) $lv->appendChild($ks);
-            }
-        }
-
         // pdfFileUrl (prefer direct download)
         $galleys = $publication->getData('galleys');
         if (!empty($galleys)) {
@@ -254,6 +237,24 @@ class CopernicusXmlBuilder
         $doi = $this->extractDoi($publication, $submission);
         if ($doi !== '') {
             $lv->appendChild($this->doc->createElement('doi', $doi));
+        }
+
+        // keywords (optional)
+        $kwBag = $publication->getData('keywords');
+        if (is_array($kwBag)) {
+            $kwForLocale = $kwBag[$locale] ?? null;
+            if (is_array($kwForLocale) && !empty($kwForLocale)) {
+                $ks = $this->doc->createElement('keywords');
+                foreach ($kwForLocale as $kw) {
+                    $kwStr = $this->pickFirstString($kw);
+                    if ($kwStr === '') continue;
+                    // MODIFIED: Replaced cdata() with textNode() for standard XML practice.
+                    $k = $this->doc->createElement('keyword');
+		    $k->appendChild($this->textNode($kwStr));
+                    $ks->appendChild($k);
+                }
+                if ($ks->hasChildNodes()) $lv->appendChild($ks);
+            }
         }
 
         // license (map to enum type)

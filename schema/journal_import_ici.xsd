@@ -549,7 +549,7 @@
          <xs:documentation xml:lang="pl">URL do udostępnionego pliku</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:anyURI">
-         <xs:pattern value="((https?:\/\/|ftps?:\/\/).+|.{0})" />
+         <xs:pattern value="((https?://|ftps?://).+|.{0})" />
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType name="dateType">
